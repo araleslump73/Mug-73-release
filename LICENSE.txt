@@ -1,0 +1,18 @@
+Mug-73 — End-user licence for the compiled software
+Copyright (c) 2026 Matteo Muggianu. All rights reserved.
+
+1. Grant. You may download and use the Mug-73 plugin (CLAP) and standalone application,
+   free of charge, on any number of your own computers, to make music, including music
+   you release or sell.
+2. Restrictions. You may not (a) redistribute, sell, rent, or sublicense the software or
+   any part of it, (b) decompile, disassemble, or reverse engineer it, except where the law
+   allows this despite this restriction, (c) remove copyright notices.
+3. Ownership. The software is licensed, not sold. All rights not expressly granted are
+   reserved. The sounds you make with it are yours.
+4. No warranty. The software is provided "as is", without warranty of any kind. To the
+   maximum extent permitted by law, the author is not liable for any damages arising from
+   its use.
+5. Third-party components (listed in THIRD-PARTY-NOTICES.md) are covered by their own
+   licences, which apply to those components.
+
+No source code is included or licensed.
