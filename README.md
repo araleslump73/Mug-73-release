@@ -2,22 +2,46 @@
 
 # Mug-73
 
-A 1970s-style monophonic synthesizer (with an optional polyphonic mode): three oscillators, a 24 dB/oct ladder filter, two envelopes, LFO, arpeggiator, step sequencer, a full effects chain and an external audio input. It runs as a **CLAP plugin** in your DAW and as a **standalone app** on Windows, macOS and Linux.
+A 1970s-style analog-inspired synthesizer, **mono or polyphonic** (2–8 voices): three oscillators, a 24 dB/oct ladder filter, two envelopes, LFO, arpeggiator, step sequencer, a full effects chain and an external audio input. It runs as a **CLAP plugin** in your DAW and as a **standalone app** on Windows, macOS and Linux.
 
 **[Download the latest release](../../releases/latest)**
 
-[☕ Support Mug-73 on Ko-fi](https://ko-fi.com/mat73)
+[![Support Mug-73 on Ko-fi](https://img.shields.io/badge/%E2%98%95%20Support%20Mug--73-on%20Ko--fi-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/mat73)
 
-> The source code is not published. This repository holds the downloads, the documentation and the issue tracker.
+![Mug-73 interface](screenshot.png)
 
-## What's inside
+## Features
 
-- **Voice**: 3 oscillators (6 waveforms, 6 ranges), noise (white/pink), mixer with overload, 4-pole ladder filter with emphasis and contour, two ADSR envelopes, LFO (free or tempo-synced) with five destinations. Mono or poly (2–8 voices).
-- **EXT channel**: voice, guitar or any track enters the mixer like an oscillator and goes through the filter and the envelope (gated or drone). In a DAW it uses a sidechain input; in the standalone app you pick an audio input in Settings.
-- **Arpeggiator and 16-step sequencer** that follow the DAW tempo and transport.
-- **Effects**: drive, compressor, 3-band EQ, phaser/flanger, chorus, rotary speaker, delay (mono/ping-pong), reverb.
-- **170 factory presets** in 12 groups; save your own, edit the preset file by hand, export and import.
-- **MIDI**: pitch bend, mod wheel, program change, MIDI Learn on every control.
+**Sound generation**
+- 3 oscillators, each with 6 ranges (LO, 32', 16', 8', 4', 2') and 6 waveforms (triangle, sharktooth, sawtooth, square, wide and narrow pulse); detune on oscillators 2 and 3, oscillator 3 can follow the keyboard or run as a low-frequency modulator.
+- Noise generator (white or pink) and a mixer with a switch and a level for every source, plus **Overload**: push the mixer into the filter for the classic saturated sound.
+- **Mono or poly** (2–8 voices), with multi or legato trigger, glide, tuning, A-440 reference and velocity → accent.
+
+**External input (EXT)**
+- A voice, a guitar, a drum loop or any track enters the mixer as one more oscillator and goes through the ladder filter and the amplifier, like the external input of the classic semi-modular synths.
+- **Ext** knob in the MIXER (5 = original level, 10 = +12 dB) and an **Ext VCA** switch: *Gate* (heard only while you play, shaped by the envelope) or *Drone* (always open, the filter keeps working between notes).
+- Turn the three oscillators off and play the filter and envelopes with your own sound only.
+- In a DAW it is a **sidechain input** called "Ext"; in the standalone app you choose an audio input in Settings. With Ext at zero it costs nothing.
+
+**Filter and envelopes**
+- 4-pole (24 dB/oct) ladder filter with emphasis (resonance), contour amount, two keyboard-tracking switches and modulation.
+- Two ADSR envelopes (filter and loudness) from 1 ms to 10 s.
+
+**Modulation**
+- LFO with 5 waveforms (triangle, square, sample & hold, saw down, ramp up), free or synced to the tempo with 9 divisions, routed to pitch, cutoff, emphasis, amplitude, pulse width and the morph between oscillators.
+- Mod wheel and pitch bend (±2 semitones).
+
+**Arpeggiator and sequencer**
+- Arpeggiator: up, down, up/down, random, as played; 1–4 octaves, hold, swing, gate, 6 divisions.
+- 16-step sequencer with accent and slide per step, length 1–16, 4 directions, 6 divisions. Both follow the DAW tempo and transport (or an internal clock).
+
+**Effects**
+- Drive (tube, hard, fuzz), compressor, 3-band EQ, phaser / flanger, chorus, rotary speaker (brake, slow, fast, with inertia), delay (mono or ping-pong, tempo-synced), reverb with pre-delay and damping.
+
+**Presets and control**
+- 170 factory presets in 12 groups (bass, lead, pad, ambient, arpeggios, sequencer, keys, organs, effects…); save your own, edit the preset file by hand, import and export.
+- **MIDI Learn** on every control, program change, CC1, and a built-in on-screen keyboard.
+- Resizable interface with a help bar, an oscilloscope and adjustable knob and text size.
 - Very light on the CPU (about 2–3% of one core with all effects on), so small buffers are fine.
 
 ## Install
@@ -33,7 +57,7 @@ The files are not digitally signed, so Windows SmartScreen may warn you the firs
 
 For the lowest latency on Windows use the ASIO driver of your audio interface in the DAW with a 64–256 sample buffer.
 
-> **VST3** is not offered: the VST3 bindings available for this plugin framework are GPLv3, which is not compatible with closed-source distribution. Use the CLAP version (supported by Bitwig, REAPER, FL Studio, Studio One, MultitrackStudio and others) or the standalone app.
+> **VST3** is not included. Use the CLAP version (supported by Bitwig, REAPER, FL Studio, Studio One, MultitrackStudio and others) or the standalone app.
 
 ## Standalone app
 
@@ -53,9 +77,11 @@ Settings (output level, audio output, **audio input for EXT**, buffer, MIDI inpu
 
 Bugs and requests: open an [issue](../../issues). Please include your system, DAW and plugin version.
 
-## Support
+## ☕ Support
 
-Mug-73 is free. If it is useful to you, you can support its development with a tip on [Ko-fi](https://ko-fi.com/mat73). Thank you!
+Mug-73 is free. If it is useful to you, or you just enjoy it, a small tip on Ko-fi helps me keep improving it and adding new sounds. Thank you!
+
+[![Support Mug-73 on Ko-fi](https://img.shields.io/badge/%E2%98%95%20Support%20Mug--73-on%20Ko--fi-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/mat73)
 
 ## Licence
 

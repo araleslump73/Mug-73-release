@@ -2,22 +2,46 @@
 
 # Mug-73
 
-Sintetizzatore monofonico in stile anni '70 (con modo polifonico opzionale): tre oscillatori, filtro ladder a 24 dB/ottava, due inviluppi, LFO, arpeggiatore, step sequencer, catena di effetti completa e ingresso audio esterno. Funziona come **plugin CLAP** nel tuo DAW e come **app standalone** su Windows, macOS e Linux.
+Sintetizzatore in stile analogico anni '70, **mono o polifonico** (2–8 voci): tre oscillatori, filtro ladder a 24 dB/ottava, due inviluppi, LFO, arpeggiatore, step sequencer, catena di effetti completa e ingresso audio esterno. Funziona come **plugin CLAP** nel tuo DAW e come **app standalone** su Windows, macOS e Linux.
 
 **[Scarica l'ultima versione](../../releases/latest)**
 
-[☕ Sostieni Mug-73 su Ko-fi](https://ko-fi.com/mat73)
+[![Sostieni Mug-73 su Ko-fi](https://img.shields.io/badge/%E2%98%95%20Sostieni%20Mug--73-su%20Ko--fi-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/mat73)
 
-> Il codice sorgente non è pubblicato. Questa repo contiene i download, la documentazione e le segnalazioni.
+![Mug-73 interface](screenshot.png)
 
-## Cosa c'è dentro
+## Caratteristiche
 
-- **Voce**: 3 oscillatori (6 forme d'onda, 6 registri), rumore (bianco/rosa), mixer con overload, filtro ladder a 4 poli con enfasi e contour, due inviluppi ADSR, LFO (libero o a tempo) con cinque destinazioni. Mono o poly (2–8 voci).
-- **Canale EXT**: voce, chitarra o una traccia qualsiasi entra nel mixer come un oscillatore e passa dal filtro e dall'inviluppo (a gate o drone). Nel DAW usa un ingresso sidechain; nello standalone scegli l'ingresso audio nelle Settings.
-- **Arpeggiatore e sequencer a 16 passi** che seguono tempo e transport del DAW.
-- **Effetti**: drive, compressore, EQ a 3 bande, phaser/flanger, chorus, rotary, delay (mono/ping-pong), riverbero.
-- **170 preset di fabbrica** in 12 gruppi; salvi i tuoi, modifichi il file a mano, esporti e importi.
-- **MIDI**: pitch bend, mod wheel, program change, MIDI Learn su ogni controllo.
+**Generazione del suono**
+- 3 oscillatori, ciascuno con 6 registri (LO, 32', 16', 8', 4', 2') e 6 forme d'onda (triangolare, dente di squalo, dente di sega, quadra, impulso largo e stretto); intonazione fine su oscillatori 2 e 3, e l'oscillatore 3 può seguire la tastiera o fare da modulatore a bassa frequenza.
+- Generatore di rumore (bianco o rosa) e mixer con interruttore e livello per ogni sorgente, più **Overload**: spingi il mixer nel filtro per il classico suono saturo.
+- **Mono o poly** (2–8 voci), con trigger multi o legato, glide, accordatura, riferimento A-440 e velocity → accento.
+
+**Ingresso esterno (EXT)**
+- Una voce, una chitarra, un loop di batteria o una traccia qualsiasi entra nel mixer come un oscillatore in più e passa dal filtro ladder e dall'amplificatore, come l'ingresso esterno dei classici sintetizzatori semimodulari.
+- Manopola **Ext** nel MIXER (5 = livello originale, 10 = +12 dB) e interruttore **Ext VCA**: *Gate* (si sente solo mentre suoni, con l'inviluppo) oppure *Drone* (sempre aperto, il filtro lavora anche tra una nota e l'altra).
+- Spegni i tre oscillatori e suona filtro e inviluppi solo col tuo suono.
+- Nel DAW è un **ingresso sidechain** chiamato "Ext"; nello standalone scegli l'ingresso audio nelle Settings. Con Ext a zero non costa nulla.
+
+**Filtro e inviluppi**
+- Filtro ladder a 4 poli (24 dB/ottava) con enfasi (risonanza), quantità di contour, due interruttori di keyboard tracking e modulazione.
+- Due inviluppi ADSR (filtro e volume) da 1 ms a 10 s.
+
+**Modulazione**
+- LFO con 5 forme d'onda (triangolare, quadra, sample & hold, sega discendente, rampa), libero o sincronizzato al tempo con 9 divisioni, diretto a intonazione, cutoff, enfasi, ampiezza, larghezza d'impulso e al morphing tra gli oscillatori.
+- Mod wheel e pitch bend (±2 semitoni).
+
+**Arpeggiatore e sequencer**
+- Arpeggiatore: su, giù, su/giù, casuale, come suonato; 1–4 ottave, hold, swing, gate, 6 divisioni.
+- Sequencer a 16 passi con accento e slide per passo, lunghezza 1–16, 4 direzioni, 6 divisioni. Entrambi seguono tempo e transport del DAW (o un clock interno).
+
+**Effetti**
+- Drive (valvola, hard, fuzz), compressore, EQ a 3 bande, phaser / flanger, chorus, rotary (freno, lento, veloce, con inerzia), delay (mono o ping-pong, sincronizzabile al tempo), riverbero con pre-delay e damping.
+
+**Preset e controllo**
+- 170 preset di fabbrica in 12 gruppi (bassi, lead, pad, ambient, arpeggi, sequencer, tastiere, organi, effetti…); salvi i tuoi, modifichi il file a mano, importi ed esporti.
+- **MIDI Learn** su ogni controllo, program change, CC1 e tastiera a schermo.
+- Interfaccia ridimensionabile con barra di aiuto, oscilloscopio e dimensioni di manopole e testo regolabili.
 - Leggerissimo per la CPU (circa 2–3% di un core con tutti gli effetti), quindi vanno bene i buffer piccoli.
 
 ## Installazione
@@ -33,7 +57,7 @@ I file non sono firmati digitalmente, quindi Windows SmartScreen può avvisarti 
 
 Per la latenza più bassa su Windows usa nel DAW il driver ASIO della tua scheda audio con buffer di 64–256 campioni.
 
-> Il **VST3** non c'è: le librerie VST3 disponibili per questo framework sono GPLv3, incompatibili con una distribuzione senza sorgente. Usa la versione CLAP (supportata da Bitwig, REAPER, FL Studio, Studio One, MultitrackStudio e altri) o l'app standalone.
+> Il **VST3** non è incluso. Usa la versione CLAP (supportata da Bitwig, REAPER, FL Studio, Studio One, MultitrackStudio e altri) o l'app standalone.
 
 ## App standalone
 
@@ -53,9 +77,11 @@ Le Settings (livello uscita, uscita audio, **ingresso audio per EXT**, buffer, i
 
 Bug e richieste: apri una [issue](../../issues), indicando sistema, DAW e versione del plugin.
 
-## Sostegno
+## ☕ Sostegno
 
-Mug-73 è gratuito. Se ti è utile, puoi sostenerne lo sviluppo con una mancia su [Ko-fi](https://ko-fi.com/mat73). Grazie!
+Mug-73 è gratuito. Se ti è utile, o ti diverti a suonarlo, una piccola mancia su Ko-fi mi aiuta a migliorarlo e ad aggiungere nuovi suoni. Grazie!
+
+[![Sostieni Mug-73 su Ko-fi](https://img.shields.io/badge/%E2%98%95%20Sostieni%20Mug--73-su%20Ko--fi-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/mat73)
 
 ## Licenza
 
