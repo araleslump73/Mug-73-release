@@ -15,13 +15,15 @@ Sintetizzatore in stile analogico anni '70, **mono o polifonico** (2–8 voci): 
 **Generazione del suono**
 - 3 oscillatori, ciascuno con 6 registri (LO, 32', 16', 8', 4', 2') e 6 forme d'onda (triangolare, dente di squalo, dente di sega, quadra, impulso largo e stretto); intonazione fine su oscillatori 2 e 3, e l'oscillatore 3 può seguire la tastiera o fare da modulatore a bassa frequenza.
 - Generatore di rumore (bianco o rosa) e mixer con interruttore e livello per ogni sorgente, più **Overload**: spingi il mixer nel filtro per il classico suono saturo.
-- **Mono o poly** (2–8 voci), con trigger multi o legato, glide, accordatura, riferimento A-440 e velocity → accento.
+- **Mono, poly o unisono** (2–8 voci), con trigger multi o legato, glide, accordatura, riferimento A-440 e velocity → accento.
+- **VOICING**: voci all'unisono con detune, voci poly e unisono aperte nello stereo, **drift** analogico di oscillatori e cutoff e l'anello di **feedback** (l'uscita che rientra nel mixer) per bassi e lead che ringhiano.
 
 **Ingresso esterno (EXT)**
 - Una voce, una chitarra, un loop di batteria o una traccia qualsiasi entra nel mixer come un oscillatore in più e passa dal filtro ladder e dall'amplificatore, come l'ingresso esterno dei classici sintetizzatori semimodulari.
 - Manopola **Ext** nel MIXER (5 = livello originale, 10 = +12 dB) e interruttore **Ext VCA**: *Gate* (si sente solo mentre suoni, con l'inviluppo) oppure *Drone* (sempre aperto, il filtro lavora anche tra una nota e l'altra).
 - Spegni i tre oscillatori e suona filtro e inviluppi solo col tuo suono.
 - Nel DAW è un **ingresso sidechain** chiamato "Ext"; nello standalone scegli l'ingresso audio nelle Settings. Con Ext a zero non costa nulla.
+- **VOICE-IN, pitch tracker**: canta o suona nell'ingresso e il Mug-73 segue la tua altezza (note, intonazione fine come bend, dinamica che apre il filtro, voce diretta opzionale verso gli effetti). Una voce e una chitarra demo permettono di provarlo senza microfono.
 
 **Filtro e inviluppi**
 - Filtro ladder a 4 poli (24 dB/ottava) con enfasi (risonanza), quantità di contour, due interruttori di keyboard tracking e modulazione.
@@ -36,20 +38,19 @@ Sintetizzatore in stile analogico anni '70, **mono o polifonico** (2–8 voci): 
 - Sequencer a 16 passi con accento e slide per passo, lunghezza 1–16, 4 direzioni, 6 divisioni. Entrambi seguono tempo e transport del DAW (o un clock interno).
 
 **Effetti**
-- Drive (valvola, hard, fuzz), compressore, EQ a 3 bande, phaser / flanger, chorus, rotary (freno, lento, veloce, con inerzia), delay (mono o ping-pong, sincronizzabile al tempo), riverbero con pre-delay e damping.
+- Drive (valvola, hard, fuzz), compressore, EQ a 3 bande, phaser / flanger, chorus o **ensemble** da string machine, rotary (freno, lento, veloce, con inerzia), delay (mono o ping-pong, sincronizzabile al tempo, pulito o a **nastro** con wow, flutter e autooscillazione), riverbero (**hall** o **plate**) con pre-delay e damping.
 
 **Preset e controllo**
-- 170 preset di fabbrica in 12 gruppi (bassi, lead, pad, ambient, arpeggi, sequencer, tastiere, organi, effetti…); salvi i tuoi, modifichi il file a mano, importi ed esporti.
+- 190 preset di fabbrica in 13 gruppi (bassi, lead, pad, ambient, arpeggi, sequencer, tastiere, organi, effetti… e **Vintage 73**, venti suoni costruiti su unisono, ensemble, eco a nastro e plate); salvi i tuoi, modifichi il file a mano, importi ed esporti.
 - **MIDI Learn** su ogni controllo, program change, CC1 e tastiera a schermo.
-- Interfaccia ridimensionabile con barra di aiuto, oscilloscopio e dimensioni di manopole e testo regolabili.
-- Leggerissimo per la CPU (circa 2–3% di un core con tutti gli effetti), quindi vanno bene i buffer piccoli.
+- Interfaccia ridimensionabile in stile anni 70: guance in noce, manopole con gonna in alluminio spazzolato, VU meter retroilluminati, oscilloscopio, barra di aiuto, dimensioni di manopole e testo regolabili.
+- Leggerissimo per la CPU (una voce mono circa lo 0,5% di un core, tutti gli effetti circa il 2–3%), quindi vanno bene i buffer piccoli.
 
 ## Installazione
 
 1. Scarica da **Releases** lo zip per il tuo sistema e decomprimilo.
 2. Copia `Mug-73.clap`:
    - **Windows**: `C:\Program Files\Common Files\CLAP\`
-   - **macOS**: `~/Library/Audio/Plug-Ins/CLAP/`, poi `xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/CLAP/Mug-73.clap` (i file non sono firmati)
    - **Linux**: `~/.clap/`
 3. Riscansiona i plugin nel DAW: **Mug-73** compare tra gli strumenti.
 

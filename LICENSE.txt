@@ -6,10 +6,7 @@ Copyright (c) 2026 Matteo Muggianu. All rights reserved.
    you release or sell.
 2. Restrictions. You may not (a) redistribute, sell, rent, or sublicense the software or
    any part of it, (b) decompile, disassemble, or reverse engineer it, except where the law
-   allows this despite this restriction, (c) remove copyright notices, (d) copy, extract,
-   republish or reuse any part of the software or of its web (HTML, JavaScript,
-   WebAssembly) version, its user interface, its factory presets and sound designs, or
-   its documentation, in whole or in part, other than the sounds you make with it.
+   allows this despite this restriction, (c) remove copyright notices.
 3. Ownership. The software is licensed, not sold. All rights not expressly granted are
    reserved. The sounds you make with it are yours.
 4. No warranty. The software is provided "as is", without warranty of any kind. To the
